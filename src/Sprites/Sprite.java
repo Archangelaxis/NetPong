@@ -1,0 +1,42 @@
+package Sprites;
+
+import Game.Input;
+
+public abstract class Sprite {
+
+	private int x;
+	private int y;
+	private boolean removed;
+
+	public Sprite(int x, int y) {
+		this.x = x;
+		this.y = y;
+		removed = false;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+	
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	public boolean isRemoved() {
+		return removed;
+	}
+	
+	public void remove() {
+		removed = true;
+	}
+
+	public abstract void tick(Input input);
+}
