@@ -1,10 +1,8 @@
-package Game;
+package Server;
 
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
-
-import Game.GameServer;
 
 public class GameClientHandler {
 

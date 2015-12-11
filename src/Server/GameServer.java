@@ -1,12 +1,9 @@
-package Game;
+package Server;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-
-import Client.ChatServer;
-import Game.GameClientHandler;
 
 public class GameServer {
 	
@@ -35,8 +32,8 @@ public class GameServer {
 			System.out.println("New client accepted..." + client.getRemoteSocketAddress());
 			System.out.println("Total users: " + clientList.size());
 			GameClientHandler handler = new GameClientHandler(client,this);
-			Thread t = new Thread(handler);
-			t.start();
+			//Thread t = new Thread(handler);
+			//t.start();
 		}
 	}
 	public static void main(String[] args) throws IOException {
